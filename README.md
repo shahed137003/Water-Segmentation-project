@@ -104,7 +104,7 @@ To run this project, first clone the repository and install the necessary depend
 ```bash
 git clone https://github.com/your-username/water-segmentation.git
 cd water-segmentation
-
+```
 ## 📜 License
 
 This project is licensed under the **MIT License**. You are free to use, modify, and distribute the project as long as the original copyright is maintained. 
