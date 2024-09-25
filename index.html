@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Segmentation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            margin-bottom: 20px;
+        }
+        .result-image {
+            margin-top: 20px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #fff;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">🌊 Water Segmentation</h1>
+
+        <form class="p-3 text-center" action='/' method="post" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="imagefile" accept=".tif,.png,.jpg,.jpeg" required>
+            <input class="btn btn-primary mt-3" type="submit" value="Predict Image">
+        </form>
+
+        {% if result_image %}
+        <h2 class="text-center">Result:</h2>
+        <div class="text-center result-image">
+            <img src="/images/{{ result_image }}" alt="Segmentation Output" class="img-fluid">
+        </div>
+        {% endif %}
+    </div>
+
+    <footer class="footer">
+        <p>&copy; {{ current_year }} Water Segmentation Application</p>
+    </footer>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
