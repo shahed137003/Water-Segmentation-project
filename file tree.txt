@@ -1,0 +1,8 @@
+project_folder/
+│
+├── images/
+│   └── output_/       # Folder where processed images are saved
+│       └── 2.png      # Processed image
+├── templates/
+│   └── index.html     # HTML file
+└── app.py             # Flask app
